@@ -38,6 +38,19 @@ body{background:#06192a!important;color:#e9f5ff!important;font-family:Inter,Aria
 .module .photo:after{background:linear-gradient(180deg,transparent 0%,#05243a30 18%,#05243adf 29%,#052239 44%,#052239 100%)!important}
 .module .module-body{z-index:2}
 .module .module-icon{z-index:3}
+</style><style id="premium-card-final-cleanup">
+/* Mask baked-in mockup icons while retaining the actual live icon and photo. */
+.module .photo::before{
+content:"";position:absolute;left:0;top:45px;width:132px;height:118px;
+background:linear-gradient(180deg,#06263bdb 0%,#052239f2 62%,#052239 100%);
+border-radius:0 0 18px 0;z-index:1;pointer-events:none
+}
+.module .photo::after{z-index:2!important}
+.module .module-icon{z-index:4!important;box-shadow:0 5px 18px #00192d55!important}
+.module .module-body{z-index:3!important}
+.module h2{position:relative;text-shadow:0 1px 3px #001d32}
+.module .access .arrow{box-shadow:0 3px 14px #001b2e66}
+@media(max-width:650px){.module .photo::before{width:128px;top:45px;height:118px}}
 </style></head><body>
 <header class="top"><button class="hamburger" id="menu" aria-label="Toggle navigation">☰</button><div class="logo">⚓</div><div><div class="brand">TOWAGE <span>DIGITAL HUB</span></div><div class="subtitle">MONITOR · COORDINATE · SUPPORT</div></div><div class="topright"><button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to day mode" aria-pressed="true">☀ Day mode</button><span>🌐 EN</span><span>♟ Profile</span></div></header><div class="shell"><aside aria-label="Navigation"><a class="active" href="#home" title="Console">▦</a><a href="#tug" title="Towage">⚓</a><a href="#fuel" title="Fuel Monitoring">⛽</a><a href="#inspection" title="Inspection">▤</a><a href="#future" title="More">⚙</a></aside><main id="home"><div class="console"><strong>▦ &nbsp;Console</strong><span id="hubClock"></span></div><section class="modules" aria-label="Digital Hub modules"><article class="module" id="fuel"><div class="photo fuel-monitor-photo"><div class="monitor-bars"><i style="--h:40%"></i><i style="--h:70%"></i><i style="--h:55%"></i><i style="--h:85%"></i><i style="--h:65%"></i><i style="--h:95%"></i></div><div class="monitor-line"></div><div class="monitor-dots"><i></i><i></i><i></i></div></div><div class="module-icon">⛽</div><div class="module-body"><h2>FUEL MONITORING</h2><p>Track fuel consumption, inventory reconciliation, fuel capping and reporting for tugboats and pilot boats.</p><a class="access" href="https://script.google.com/macros/s/AKfycbz5hETKzzKBKgcmN5sI9cW4EPDsMXps6wW3HcFWjYm6xObdG9SQ8XaARdXwuA7U8pLZ4Q/exec" target="_blank" rel="noopener noreferrer" aria-label="Open FUEL MONITORING">Access Module <span class="arrow">➜</span></a></div></article>
 <article class="module" id="tug"><div class="photo tug"></div><div class="module-icon">⛴</div><div class="module-body"><h2>TUG MOVEMENT RECORD</h2><p>Monitor and manage daily tugboat movements and operational movement records.</p><a class="access" href="https://script.google.com/macros/s/AKfycbwYFPoRvxokdonzCctOYKUe165uXUUNblqcnyyLH5KNWf2eK44DEfJRYSAay4sBKteh/exec" target="_blank" rel="noopener noreferrer" aria-label="Open TUG MOVEMENT RECORD">Access Module <span class="arrow">➜</span></a></div></article>
